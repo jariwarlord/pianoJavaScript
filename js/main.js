@@ -1,3 +1,4 @@
+
 document.addEventListener('keydown', note);
 function playA() {
   document.getElementById('a').play();
@@ -50,6 +51,12 @@ function playP() {
 function playM() {
   document.getElementById('m').play();
 }
+
+/*
+function note(e)
+
+
+ */
 function note(e){
   if (e.code === 'KeyA') {
     playA();
@@ -87,3 +94,4 @@ function note(e){
 
 
 }
+
