@@ -1,17 +1,52 @@
 
-/*
-  function playAudio(id) {
-    document.getElementById(id).play();
+  // Tek tek her idyi çekmek yerine tüm  idleri tek fonksiyonda topladım.
+    function playAudio(id) {
+      //document.getElementById(id).currentTime = 0; bu kendi kendime düşünürken eklediğim bir özellik üst üste basınca notaların delaysız çalmasını sağlıyor.
+      document.getElementById(id).play();
+
+    }
+
+  //Tek tek her keye fonksiyon yazmak yerine keyleri bir mape toplayıp fonksiyonu daha okunabilir ve pratik hale getirdim.
+  const keySounds = {
+    'KeyA': 'a',
+    'KeyW': 'w',
+    'KeyS': 's',
+    'KeyE': 'e',
+    'KeyD': 'd',
+    'KeyF': 'f',
+    'KeyT': 't',
+    'KeyG': 'g',
+    'KeyY': 'y',
+    'KeyH': 'h',
+    'KeyU': 'u',
+    'KeyJ': 'j',
+    'KeyK': 'k',
+    'KeyO': 'o',
+    'KeyL': 'l',
+    'KeyP': 'p',
+    'KeyM': 'm'
+
   }
- */
+  //Burası keydown ile tuşa basma olayını izleyip ona göre note fonksiyonun çalıştırmamızı ve sesi vermemizi sağlıyor.
+  document.addEventListener('keydown', note);
+  function note(e){
+    if (keySounds[e.code]){
+        playAudio(keySounds[e.code])
+    }
+  }
+//Eğer başka bir tuşa basılır ise ya da aynı notaya tekrar basılırsa notanın tekrar çalmasını nasıl sağlayabiliriz?
+// Audio.timer gibi bir değişken olmalı bunun çektiğimiz wav dosyalarından çekmeliyiz
+//o o değişkeni kısaltıp ya da yeni bir eventListener ekleyip yeni bir nota  basıldığında sıfırlamalıyız.
+
+
+
+/*
+
 document.addEventListener('keydown', note);
 function playA() {
   document.getElementById('a').play();
 }
 function playW() {
-  document.getElementById('w').play();
-}
-function playS() {
   document.getElementById('s').play();
 }
 function playE() {
@@ -61,7 +96,7 @@ function playM() {
 function note(e)
 
 
- */
+
 function note(e){
   if (e.code === 'KeyA') {
     playA();
@@ -99,4 +134,4 @@ function note(e){
 
 
 }
-
+*/

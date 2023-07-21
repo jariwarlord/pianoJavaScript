@@ -45,3 +45,8 @@
 
 
 }
+#btn btn-secondary btn-lg btn-block{
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
