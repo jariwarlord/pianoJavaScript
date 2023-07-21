@@ -1,4 +1,9 @@
 
+/*
+  function playAudio(id) {
+    document.getElementById(id).play();
+  }
+ */
 document.addEventListener('keydown', note);
 function playA() {
   document.getElementById('a').play();
