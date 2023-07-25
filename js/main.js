@@ -1,7 +1,7 @@
 
   // Tek tek her idyi çekmek yerine tüm  idleri tek fonksiyonda topladım.
     function playAudio(id) {
-      //document.getElementById(id).currentTime = 0; bu kendi kendime düşünürken eklediğim bir özellik üst üste basınca notaların delaysız çalmasını sağlıyor.
+      document.getElementById(id).currentTime = 0;
       document.getElementById(id).play();
 
     }
